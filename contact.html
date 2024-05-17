@@ -12,7 +12,7 @@
     <!-- Responsive website -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           
@@ -29,6 +29,24 @@
             </ul>
     </nav>
 
+    <!-- Side navbar -->
+    <section id="sideNav" class=" bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 30%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closeNav" class="inline cursor-pointer" >X</p>
+        </div>
+        <ul class="flex flex-col gap-5 text-gray-600 items-center md:flex" >
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
+
     <!-- Contact form -->
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -37,7 +55,7 @@
             <form action="#" class="space-y-8">
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter your email" required>
                 </div>
                 <div>
                     <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
@@ -58,6 +76,8 @@
         <p>The Standard chunk of Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         <p>@ 2021 Greenden.com</p>
     </section>
+
+    <script src="./contact.js"></script>
    
 </body>
 
